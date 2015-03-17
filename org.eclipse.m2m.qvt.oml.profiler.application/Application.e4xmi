@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_eDByUKXIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ide.application" bindingContexts="_eDByWaXIEeOkZvsKN-NhUQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_eDByUaXIEeOkZvsKN-NhUQ" label="QVTo Profiler Visualizer" iconURI="platform:/plugin/org.eclipse.m2m.qvt.oml.profiler.application/icons/column-chart.png" x="100" y="100" width="800" height="600">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_aOTuEKXJEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.partsashcontainer.main" selectedElement="_az6VgKXJEeOkZvsKN-NhUQ" horizontal="true">
+      <children xsi:type="basic:Part" xmi:id="_az6VgKXJEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.part.selection" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.parts.SelectionPart" label="Selection"/>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_izHnwKXJEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.partsashcontainer.right">
+        <children xsi:type="basic:PartStack" xmi:id="_7om4oKhQEeONkItVywvljw" elementId="org.eclipse.m2m.qvt.oml.profiler.application.partstack.0" selectedElement="_4i06AKYMEeOkZvsKN-NhUQ">
+          <children xsi:type="basic:Part" xmi:id="_4i06AKYMEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.part.treeTable" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.parts.TreeTablePart" label="Call Tree">
+            <toolbar xmi:id="_BXliwKhTEeONkItVywvljw" elementId="org.eclipse.m2m.qvt.oml.profiler.application.toolbar.0">
+              <children xsi:type="menu:ToolControl" xmi:id="_Dht4AKhTEeONkItVywvljw" elementId="org.eclipse.m2m.qvt.oml.profiler.application.toolcontrol.highlight" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.parts.HighlightToolItem">
+                <tags>stretch</tags>
+              </children>
+            </toolbar>
+          </children>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_8FawcKhQEeONkItVywvljw" elementId="org.eclipse.m2m.qvt.oml.profiler.application.partstack.1" selectedElement="_vRFkUKXJEeOkZvsKN-NhUQ">
+          <children xsi:type="basic:Part" xmi:id="_vRFkUKXJEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.part.average" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.parts.AveragePart" label="Combined"/>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_N6xf4KXJEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_Ncme4KYFEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.menu.file" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6mIIIKYEEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handledmenuitem.0" label="Load file..." command="_0Qqa4KYEEeOkZvsKN-NhUQ"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_QSoQ0KYFEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.menuseparator.0"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_-xTvIKYEEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handledmenuitem.exit" label="Exit" command="_cgACEKYEEeOkZvsKN-NhUQ"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_xOL_UDTFEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.application.menu.timeunit" label="Time unit">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_B11HADTGEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handledmenuitem.mirco" label="Microseconds" type="Radio" command="_8CSloDTGEeSEld6HIA2aFg">
+          <parameters xmi:id="_8O_yoDTLEeSEld6HIA2aFg" elementId="micro_parameter" name="org.eclipse.m2m.qvt.oml.profiler.timeunit.parameter" value="MICROSECONDS"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Lb5CUDTGEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handledmenuitem.milli" label="Milliseconds" selected="true" type="Radio" command="_8CSloDTGEeSEld6HIA2aFg">
+          <parameters xmi:id="_4-h1gDTNEeSEld6HIA2aFg" elementId="milli_parameter" name="org.eclipse.m2m.qvt.oml.profiler.timeunit.parameter" value="MILLISECONDS"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_TYhhsDTGEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handledmenuitem.seconds" label="Seconds" type="Radio" command="_8CSloDTGEeSEld6HIA2aFg">
+          <parameters xmi:id="_5WCWkDTNEeSEld6HIA2aFg" elementId="sec_parameter" name="org.eclipse.m2m.qvt.oml.profiler.timeunit.parameter" value="SECONDS"/>
+        </children>
+      </children>
+    </mainMenu>
+  </children>
+  <handlers xmi:id="_cDAkEKYEEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handler.exit" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.handlers.ExitHandler" command="_cgACEKYEEeOkZvsKN-NhUQ"/>
+  <handlers xmi:id="_2RylIKYEEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handler.load" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.handlers.LoadHandler" command="_0Qqa4KYEEeOkZvsKN-NhUQ"/>
+  <handlers xmi:id="_IoClMDTHEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.application.handler.timeunit" contributionURI="bundleclass://org.eclipse.m2m.qvt.oml.profiler.application/org.eclipse.m2m.qvt.oml.profiler.handlers.TimeUnitHandler" command="_8CSloDTGEeSEld6HIA2aFg"/>
+  <rootContext xmi:id="_eDByWaXIEeOkZvsKN-NhUQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_eDByWqXIEeOkZvsKN-NhUQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_eDByW6XIEeOkZvsKN-NhUQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_cgACEKYEEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.command.exit" commandName="Exit"/>
+  <commands xmi:id="_0Qqa4KYEEeOkZvsKN-NhUQ" elementId="org.eclipse.m2m.qvt.oml.profiler.application.command.load" commandName="Load"/>
+  <commands xmi:id="_8CSloDTGEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.application.command.timeunit" commandName="TimeUnit">
+    <parameters xmi:id="__NwcEDTGEeSEld6HIA2aFg" elementId="org.eclipse.m2m.qvt.oml.profiler.timeunit.parameter" name="time_unit_parameter" typeId="" optional="false"/>
+  </commands>
+  <addons xmi:id="_eDByUqXIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_eDByU6XIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_eDByVKXIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_eDByVaXIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_eDByVqXIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_eDByV6XIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_eDByWKXIEeOkZvsKN-NhUQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>

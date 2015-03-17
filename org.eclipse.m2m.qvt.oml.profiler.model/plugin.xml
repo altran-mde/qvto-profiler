@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated profiler -->
+      <package
+            uri="http://www.eclipse.org/qvt/1.0.0/Profiler"
+            class="org.eclipse.m2m.qvt.oml.profiler.model.ModelPackage"
+            genModel="model/profiler.genmodel"/>
+   </extension>
+
+</plugin>

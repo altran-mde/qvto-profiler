@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.eclipse.m2m.qvt.oml.profiler</groupId>
+	<artifactId>org.eclipse.m2m.qvt.oml.profiler.build</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>0.20.0</tycho-version>
+		<eclipse-repo>http://download.eclipse.org/releases/luna</eclipse-repo>
+	</properties>
+
+	<modules>
+		<module>../org.eclipse.m2m.qvt.oml.profiler</module>
+		<module>../org.eclipse.m2m.qvt.oml.profiler.application</module>
+		<module>../org.eclipse.m2m.qvt.oml.profiler.application.feature</module>
+		<module>../org.eclipse.m2m.qvt.oml.profiler.feature</module>
+		<module>../org.eclipse.m2m.qvt.oml.profiler.model</module>
+		<module>../org.eclipse.m2m.qvt.oml.profiler.product</module>
+		<module>../org.eclipse.m2m.qvt.oml.profiler.site</module>
+	</modules>
+
+	<repositories>
+		<!-- the repo are used by Tycho (or maven) to find missing bundles when 
+			building a platform -->
+		<repository>
+			<id>eclipse-p2-site</id>
+			<layout>p2</layout>
+			<url>${eclipse-repo}</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<defaultGoal>clean verify</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<pomDependencies>consider</pomDependencies>
+					<resolver>p2</resolver>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<source>1.5</source>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-source-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<executions>
+						<execution>
+							<id>plugin-source</id>
+							<goals>
+								<goal>plugin-source</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-versions-plugin</artifactId>
+					<version>${tycho-version}</version>
+				</plugin>
+
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>2.5</version>
+					<configuration>
+						<filesets>
+							<fileset>
+								<directory>workspace</directory>
+							</fileset>
+						</filesets>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

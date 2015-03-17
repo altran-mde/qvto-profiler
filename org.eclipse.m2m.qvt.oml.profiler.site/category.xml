@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.m2m.qvt.oml.profiler.feature_1.0.1.qualifier.jar" id="org.eclipse.m2m.qvt.oml.profiler.feature" version="1.0.1.qualifier">
+      <category name="qvto_profiler"/>
+   </feature>
+   <category-def name="qvto_profiler" label="QVTo Profiler"/>
+</site>

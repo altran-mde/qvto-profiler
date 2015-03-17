@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.eclipse.m2m.qvt.oml.profiler.actionSet"
+            label="QVTo profiling action set"
+            visible="true">
+         <menu
+               id="org.eclipse.m2m.qvt.oml.profiler.menu"
+               label="QVTo Profiler"
+               path="qvto_profiler">
+         </menu>
+         <action
+               allowLabelUpdate="true"
+               class="org.eclipse.m2m.qvt.oml.profiler.actions.QVTOProfilerAction"
+               icon="icons/column-chart.png"
+               id="org.eclipse.m2m.qvt.oml.profiler.actions.QVTOProfilerAction"
+               label="Enable QVTo profiler"
+               menubarPath="org.eclipse.m2m.qvt.oml.profiler.menu/qvto_profiler"
+               state="false"
+               style="toggle"
+               toolbarPath="org.eclipse.m2m.qvt.oml.profiler.toolbar"
+               tooltip="Enable QVTo profiler">
+         </action>
+      </actionSet>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="QVTo Profiler preferences"
+            class="org.eclipse.m2m.qvt.oml.profiler.preferences.QVToProfilerPreferencePage"
+            id="org.eclipse.m2m.qvt.oml.profiler.preferences.QVToProfilerPreferencePage">
+      </page>
+   </extension>  
+</fragment>
